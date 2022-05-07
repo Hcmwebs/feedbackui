@@ -5,7 +5,7 @@ const Title = () => {
 	return (
 		<>
 			<header>
-				<h1 className='title'>Heading goes here!</h1>
+				<h1 className='title'>Feedback</h1>
 			</header>
 		</>
 	)
