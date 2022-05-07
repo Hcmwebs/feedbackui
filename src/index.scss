@@ -10,11 +10,10 @@ body {
 	place-items: center;
 	min-height: 100vh;
 	background-color: #e6e6e6;
-
 }
 .container {
 	width: min(100%, 1000px);
-	padding-inline: 10%;
+	padding-inline: 1rem;
 	display: grid;
 	place-items: center;
 	gap: 3rem;
