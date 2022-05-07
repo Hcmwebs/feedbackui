@@ -1,0 +1,19 @@
+.card {
+	width: 100%;
+	max-width: 350px;
+	display: grid;
+	place-items: center;
+	gap: 1rem;
+	padding: 2rem;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	border-radius: 0.25rem;
+	position: relative;
+
+	.icon-close {
+		position: absolute;
+		top: 0.3rem;
+		right: 0.5rem;
+		font-size: 1.5rem;
+	}
+}
