@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BsArrowRight, BsXCircle } from 'react-icons/bs'
 import './index.scss'
 
 const Card = () => {
+	const [value, setValue] = useState('')
+
+	const handleOnChange = (e) => {
+		console.log(e.target.value)
+		setValue(e.target.value)
+	}
+
+	const handleSubmit = (e) => {
+		e.preventDefault()
+	}
 	return (
 		<>
 			<main>
@@ -10,7 +20,11 @@ const Card = () => {
 					<BsXCircle className='icon-close' />
 					<p>How satisfied are you using our invoicing feature?</p>
 					<div className='rating-btns'>
-						<button className='btn'>1</button>
+						<input
+							type='button'
+							className='btn'
+							onClick={handleOnChange}
+							value= {value} />
 						<button className='btn'>2</button>
 						<button className='btn'>3</button>
 						<button className='btn'>4</button>
@@ -29,7 +43,7 @@ const Card = () => {
 						<p>I don't use the invoicing feature.</p>
 					</div>
 					<div className='divider'></div>
-					<button className='btn btn-next'>
+					<button className='btn btn-next' type='submit' onClick={handleSubmit}>
 						Next <BsArrowRight />
 					</button>
 				</div>
