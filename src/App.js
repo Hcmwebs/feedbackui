@@ -1,14 +1,12 @@
 import React from 'react'
 import './App.scss'
-import Card from './Components/Card/Card'
-import Title from './Components/Title/Title'
+import Form from './Components/Form/Form'
 
 const App = () => {
 	return (
-		<div className='container'>
-			<Title />
-			<Card />
-		</div>
+		<>
+			<Form />
+		</>
 	)
 }
 
