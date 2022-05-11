@@ -6,8 +6,10 @@ import './index.scss'
 
 const Form = () => {
 	const [activeValue, setActiveValue] = useState('')
+	const [hoverValue, setHoverValue] = useState('')
 	const handleSubmit = (e) => {
 		e.preventDefault()
+		setHoverValue('')
 		setActiveValue('')
 		console.log('submitted')
 	}
@@ -18,6 +20,8 @@ const Form = () => {
 				<Card
 					activeValue={activeValue}
 					setActiveValue={setActiveValue}
+					hoverValue={hoverValue}
+					setHoverValue={setHoverValue}
 				/>
 				<Button />
 			</form>

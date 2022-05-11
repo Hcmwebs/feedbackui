@@ -23,10 +23,10 @@
 			transition: all 0.5s ease-in-out;
 
 			&.isActive {
-				color: #000;
+				color: rgba(218, 187, 8, 0.812);
 			}
 			&:hover {
-				color: rgba(0, 0, 0, 0.4);
+				color: rgba(218, 187, 8, 0.612);
 			}
 		}
 

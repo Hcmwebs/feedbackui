@@ -3,7 +3,7 @@ import './index.scss'
 import { BsStarFill } from 'react-icons/bs'
 import data from '../../db/data'
 
-const Card = ({ activeValue, setActiveValue }) => {
+const Card = ({ activeValue, setActiveValue, hoverValue, setHoverValue }) => {
 	return (
 		<>
 			<div className='card'>
@@ -27,6 +27,11 @@ const Card = ({ activeValue, setActiveValue }) => {
 									id={id}
 									value={value}
 									onClick={() => setActiveValue(value)}
+									onMouseEnter={() => {
+										setHoverValue(value)
+										setActiveValue('')
+									}}
+									onMouseLeave={() => setHoverValue('')}
 								/>
 							</label>
 						)
