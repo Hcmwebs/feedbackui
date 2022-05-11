@@ -17,13 +17,16 @@
 		place-items: center;
 
 		.icon-star {
+			cursor: pointer;
 			font-size: 1.5rem;
 			color: #bbb;
 			transition: all 0.5s ease-in-out;
 
-			&:hover,
-			&.active {
+			&.isActive {
 				color: #000;
+			}
+			&:hover {
+				color: rgba(0, 0, 0, 0.4);
 			}
 		}
 

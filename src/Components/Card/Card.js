@@ -1,12 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './index.scss'
+import { BsStarFill } from 'react-icons/bs'
 import data from '../../db/data'
 
-const Card = () => {
-	const [active, setActive] = useState(false)
-	const handleChange = (e) => {
-		console.log(e.target.value)
-	}
+const Card = ({ activeValue, setActiveValue }) => {
 	return (
 		<>
 			<div className='card'>
@@ -15,20 +12,21 @@ const Card = () => {
 				</p>
 				<div className='ratings'>
 					{data.map((item) => {
-						const { id, name, icon, value } = item
+						const { id, name, value } = item
 
 						return (
-							<label
-								htmlFor={id}
-								key={id}
-								className={`${active ? 'icon-star active' : 'icon-star'}`}>
-								{icon}
+							<label htmlFor={id} key={id}>
+								<BsStarFill
+									className={`${
+										value <= activeValue ? 'icon-star isActive' : 'icon-star'
+									}`}
+								/>
 								<input
 									name={name}
 									type='radio'
 									id={id}
 									value={value}
-									onClick={handleChange}
+									onClick={() => setActiveValue(value)}
 								/>
 							</label>
 						)
