@@ -65,7 +65,7 @@ const Form = () => {
 						</div>
 					</div>
 					<button className='btn'>
-						Next
+						Submit
 						<BsArrowRight />
 					</button>
 				</form>
