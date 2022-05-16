@@ -1,8 +1,123 @@
+
+
+main {
+	position: relative;
+	transition: all 0.6s ease-in-out;
+}
 .form {
+	width: 100%;
 	display: grid;
 	place-items: center;
 	gap: 1rem;
-	border: 1px solid #ccc;
+	border: none;
 	padding: 2.5rem;
-	border-radius: 0.2rem;
+	border-radius: 20px;
+	background-color: #fff;
+	box-shadow: 0px 34px 45px -15px rgba(21, 26, 65, 0.25);
+	// transform: rotateY(180deg);
+	&-body {
+		display: grid;
+		place-items: center;
+		gap: 1rem;
+		h2 {
+			font-size: 18px;
+			font-family: 'Merriweather', serif;
+			font-weight: 700;
+		}
+
+		.ratings {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			small {
+				font-size: 14px;
+			}
+		}
+
+		label {
+			display: grid;
+			place-items: center;
+			position: relative;
+
+			input[type='button'] {
+				background-color: #151a41;
+				display: none;
+				position: absolute;
+				z-index: -1;
+				visibility: hidden;
+				width: 0;
+				height: 0;
+			}
+
+			.icon-star {
+				cursor: pointer;
+				font-size: 1.5rem;
+				transition: all 0.3s ease-in-out;
+				&.isActive {
+					color: rgba(218, 187, 8, 0.812);
+				}
+				&:hover {
+					color: rgba(218, 187, 8, 0.612);
+				}
+			}
+		}
+	}
+	.btn {
+		width: 100%;
+		font-size: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.75rem 1.5rem;
+		opacity: 0.7;
+		border: 1px solid #e4e6f6;
+		background-color: #fff;
+		color: #151a41;
+		outline: none;
+		border-radius: 0.25rem;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			opacity: 1;
+			background-color: #151a41;
+			color: #fff;
+			border: none;
+		}
+	}
+}
+.card {
+	width: 330px;
+	height: 280px;
+	padding-inline: 2.5rem;
+	display: grid;
+	place-items: center;
+	gap: 0.5rem;
+	border-radius: 20px;
+	color: #e4e6f6;
+	background-color: #151a41;
+	box-shadow: 0px 34px 45px -15px rgba(21, 26, 65, 0.25);
+	position: absolute;
+	inset: 0;
+
+	p {
+		max-width: 200px;
+		text-align: center;
+		line-height: 1.6;
+
+		b {
+			color: rgba(218, 187, 8, 0.812);
+			font-weight: 700;
+		}
+	}
+}
+
+@media (min-width: 600px) {
+	.form,
+	.card {
+		max-width: 460px;
+	}
 }
